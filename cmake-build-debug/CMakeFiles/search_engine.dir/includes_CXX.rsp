@@ -1,0 +1,1 @@
+-IC:/skillbox/search_engine/nlohmann_json/include -isystem C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest
