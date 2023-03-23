@@ -1,8 +1,8 @@
-# Install script for directory: C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest
+# Install script for directory: C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/search_engine")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/SearchEngine")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -41,7 +41,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/GTest/GTestTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/GTest/GTestTargets.cmake"
-         "C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-build/googletest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets.cmake")
+         "C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-build/googletest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/GTest/GTestTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -50,36 +50,36 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/GTest" TYPE FILE FILES "C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-build/googletest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/GTest" TYPE FILE FILES "C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-build/googletest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/GTest" TYPE FILE FILES "C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-build/googletest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/GTest" TYPE FILE FILES "C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-build/googletest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets-debug.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/GTest" TYPE FILE FILES
-    "C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-build/googletest/generated/GTestConfigVersion.cmake"
-    "C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-build/googletest/generated/GTestConfig.cmake"
+    "C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-build/googletest/generated/GTestConfigVersion.cmake"
+    "C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-build/googletest/generated/GTestConfig.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/include/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/skillbox/search_engine/cmake-build-debug/lib/libgtestd.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/skillbox/SearchEngine/cmake-build-debug/lib/libgtestd.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/skillbox/search_engine/cmake-build-debug/lib/libgtest_maind.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/skillbox/SearchEngine/cmake-build-debug/lib/libgtest_maind.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-build/googletest/generated/gtest.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-build/googletest/generated/gtest.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-build/googletest/generated/gtest_main.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-build/googletest/generated/gtest_main.pc")
 endif()
 

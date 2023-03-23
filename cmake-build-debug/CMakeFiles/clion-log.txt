@@ -1,6 +1,6 @@
-"C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\skillbox\search_engine
--- Using the multi-header code from C:/skillbox/search_engine/nlohmann_json/include/
+"C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\skillbox\SearchEngine
 -- Could NOT find Python (missing: Python_EXECUTABLE Interpreter) 
+-- Using the multi-header code from C:/skillbox/SearchEngine/nlohmann_json/include/
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/skillbox/search_engine/cmake-build-debug
+-- Build files have been written to: C:/skillbox/SearchEngine/cmake-build-debug

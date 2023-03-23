@@ -1,1 +1,1 @@
--isystem C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest
+-isystem C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest

@@ -1,8 +1,8 @@
-# Install script for directory: C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src
+# Install script for directory: C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/search_engine")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/SearchEngine")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-build/googlemock/cmake_install.cmake")
+  include("C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-build/googlemock/cmake_install.cmake")
 
 endif()
 

@@ -6,25 +6,25 @@
 
 #IncludeRegexTransform: 
 
-C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/src/gtest-all.cc
+C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/src/gtest-all.cc
 gtest/gtest.h
-C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/src/gtest/gtest.h
+C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/src/gtest/gtest.h
 src/gtest.cc
-C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest.cc
+C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest.cc
 src/gtest-death-test.cc
-C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-death-test.cc
+C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-death-test.cc
 src/gtest-filepath.cc
-C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-filepath.cc
+C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-filepath.cc
 src/gtest-matchers.cc
-C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-matchers.cc
+C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-matchers.cc
 src/gtest-port.cc
-C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-port.cc
+C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-port.cc
 src/gtest-printers.cc
-C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-printers.cc
+C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-printers.cc
 src/gtest-test-part.cc
-C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-test-part.cc
+C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-test-part.cc
 src/gtest-typed-test.cc
-C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-typed-test.cc
+C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/src/src/gtest-typed-test.cc
 
 _deps/googletest-src/googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h

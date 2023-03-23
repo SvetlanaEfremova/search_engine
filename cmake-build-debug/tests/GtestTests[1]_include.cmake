@@ -1,0 +1,5 @@
+if(EXISTS "C:/skillbox/SearchEngine/cmake-build-debug/tests/GtestTests[1]_tests.cmake")
+  include("C:/skillbox/SearchEngine/cmake-build-debug/tests/GtestTests[1]_tests.cmake")
+else()
+  add_test(GtestTests_NOT_BUILT GtestTests_NOT_BUILT)
+endif()

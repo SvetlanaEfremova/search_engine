@@ -66,13 +66,35 @@ RM = "C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\skillbox\search_engine
+CMAKE_SOURCE_DIR = C:\skillbox\SearchEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\skillbox\search_engine\cmake-build-debug
+CMAKE_BINARY_DIR = C:\skillbox\SearchEngine\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	"C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\ctest.exe" --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -109,28 +131,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	"C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\ctest.exe" --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -155,9 +155,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\skillbox\search_engine\cmake-build-debug\CMakeFiles C:\skillbox\search_engine\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\skillbox\SearchEngine\cmake-build-debug\CMakeFiles C:\skillbox\SearchEngine\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\skillbox\search_engine\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\skillbox\SearchEngine\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -184,19 +184,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named search_engine
-
-# Build rule for target.
-search_engine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 search_engine
-.PHONY : search_engine
-
-# fast build rule for target.
-search_engine/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\search_engine.dir\build.make CMakeFiles/search_engine.dir/build
-.PHONY : search_engine/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -250,32 +237,31 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-main.obj: main.cpp.obj
+#=============================================================================
+# Target rules for targets named SearchEngine
 
-.PHONY : main.obj
+# Build rule for target.
+SearchEngine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 SearchEngine
+.PHONY : SearchEngine
 
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\search_engine.dir\build.make CMakeFiles/search_engine.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+# fast build rule for target.
+SearchEngine/fast:
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\SearchEngine.dir\build.make src/CMakeFiles/SearchEngine.dir/build
+.PHONY : SearchEngine/fast
 
-main.i: main.cpp.i
+#=============================================================================
+# Target rules for targets named GtestTests
 
-.PHONY : main.i
+# Build rule for target.
+GtestTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 GtestTests
+.PHONY : GtestTests
 
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\search_engine.dir\build.make CMakeFiles/search_engine.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\search_engine.dir\build.make CMakeFiles/search_engine.dir/main.cpp.s
-.PHONY : main.cpp.s
+# fast build rule for target.
+GtestTests/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\GtestTests.dir\build.make tests/CMakeFiles/GtestTests.dir/build
+.PHONY : GtestTests/fast
 
 # Help Target
 help:
@@ -290,14 +276,12 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... test
+	@echo ... GtestTests
+	@echo ... SearchEngine
 	@echo ... gmock
 	@echo ... gmock_main
 	@echo ... gtest
 	@echo ... gtest_main
-	@echo ... search_engine
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
 .PHONY : help
 
 

@@ -1,8 +1,8 @@
-# Install script for directory: C:/skillbox/search_engine
+# Install script for directory: C:/skillbox/SearchEngine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/search_engine")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/SearchEngine")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,12 +39,22 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/skillbox/search_engine/cmake-build-debug/nlohmann_json/cmake_install.cmake")
+  include("C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-build/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/skillbox/search_engine/cmake-build-debug/_deps/googletest-build/cmake_install.cmake")
+  include("C:/skillbox/SearchEngine/cmake-build-debug/nlohmann_json/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/skillbox/SearchEngine/cmake-build-debug/src/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/skillbox/SearchEngine/cmake-build-debug/tests/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/skillbox/search_engine/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/skillbox/SearchEngine/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
