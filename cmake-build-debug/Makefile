@@ -263,6 +263,19 @@ GtestTests/fast:
 	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\GtestTests.dir\build.make tests/CMakeFiles/GtestTests.dir/build
 .PHONY : GtestTests/fast
 
+#=============================================================================
+# Target rules for targets named MakeConfigFiles
+
+# Build rule for target.
+MakeConfigFiles: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MakeConfigFiles
+.PHONY : MakeConfigFiles
+
+# fast build rule for target.
+MakeConfigFiles/fast:
+	$(MAKE) $(MAKESILENT) -f MakeConfigFiles\CMakeFiles\MakeConfigFiles.dir\build.make MakeConfigFiles/CMakeFiles/MakeConfigFiles.dir/build
+.PHONY : MakeConfigFiles/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -277,6 +290,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... GtestTests
+	@echo ... MakeConfigFiles
 	@echo ... SearchEngine
 	@echo ... gmock
 	@echo ... gmock_main

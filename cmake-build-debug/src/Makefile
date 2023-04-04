@@ -227,33 +227,6 @@ ConverterJSON.cpp.s:
 	cd /d C:\skillbox\SearchEngine\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\SearchEngine.dir\build.make src/CMakeFiles/SearchEngine.dir/ConverterJSON.cpp.s
 .PHONY : ConverterJSON.cpp.s
 
-Entry.obj: Entry.cpp.obj
-
-.PHONY : Entry.obj
-
-# target to build an object file
-Entry.cpp.obj:
-	cd /d C:\skillbox\SearchEngine\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\SearchEngine.dir\build.make src/CMakeFiles/SearchEngine.dir/Entry.cpp.obj
-.PHONY : Entry.cpp.obj
-
-Entry.i: Entry.cpp.i
-
-.PHONY : Entry.i
-
-# target to preprocess a source file
-Entry.cpp.i:
-	cd /d C:\skillbox\SearchEngine\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\SearchEngine.dir\build.make src/CMakeFiles/SearchEngine.dir/Entry.cpp.i
-.PHONY : Entry.cpp.i
-
-Entry.s: Entry.cpp.s
-
-.PHONY : Entry.s
-
-# target to generate assembly for a file
-Entry.cpp.s:
-	cd /d C:\skillbox\SearchEngine\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\SearchEngine.dir\build.make src/CMakeFiles/SearchEngine.dir/Entry.cpp.s
-.PHONY : Entry.cpp.s
-
 InvertedIndex.obj: InvertedIndex.cpp.obj
 
 .PHONY : InvertedIndex.obj
@@ -280,33 +253,6 @@ InvertedIndex.s: InvertedIndex.cpp.s
 InvertedIndex.cpp.s:
 	cd /d C:\skillbox\SearchEngine\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\SearchEngine.dir\build.make src/CMakeFiles/SearchEngine.dir/InvertedIndex.cpp.s
 .PHONY : InvertedIndex.cpp.s
-
-RelativeIndex.obj: RelativeIndex.cpp.obj
-
-.PHONY : RelativeIndex.obj
-
-# target to build an object file
-RelativeIndex.cpp.obj:
-	cd /d C:\skillbox\SearchEngine\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\SearchEngine.dir\build.make src/CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.obj
-.PHONY : RelativeIndex.cpp.obj
-
-RelativeIndex.i: RelativeIndex.cpp.i
-
-.PHONY : RelativeIndex.i
-
-# target to preprocess a source file
-RelativeIndex.cpp.i:
-	cd /d C:\skillbox\SearchEngine\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\SearchEngine.dir\build.make src/CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.i
-.PHONY : RelativeIndex.cpp.i
-
-RelativeIndex.s: RelativeIndex.cpp.s
-
-.PHONY : RelativeIndex.s
-
-# target to generate assembly for a file
-RelativeIndex.cpp.s:
-	cd /d C:\skillbox\SearchEngine\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\SearchEngine.dir\build.make src/CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.s
-.PHONY : RelativeIndex.cpp.s
 
 SearchServer.obj: SearchServer.cpp.obj
 
@@ -379,15 +325,9 @@ help:
 	@echo ... ConverterJSON.obj
 	@echo ... ConverterJSON.i
 	@echo ... ConverterJSON.s
-	@echo ... Entry.obj
-	@echo ... Entry.i
-	@echo ... Entry.s
 	@echo ... InvertedIndex.obj
 	@echo ... InvertedIndex.i
 	@echo ... InvertedIndex.s
-	@echo ... RelativeIndex.obj
-	@echo ... RelativeIndex.i
-	@echo ... RelativeIndex.s
 	@echo ... SearchServer.obj
 	@echo ... SearchServer.i
 	@echo ... SearchServer.s

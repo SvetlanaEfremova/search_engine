@@ -5,9 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/skillbox/SearchEngine/src/ConverterJSON.cpp" "C:/skillbox/SearchEngine/cmake-build-debug/src/CMakeFiles/SearchEngine.dir/ConverterJSON.cpp.obj"
-  "C:/skillbox/SearchEngine/src/Entry.cpp" "C:/skillbox/SearchEngine/cmake-build-debug/src/CMakeFiles/SearchEngine.dir/Entry.cpp.obj"
   "C:/skillbox/SearchEngine/src/InvertedIndex.cpp" "C:/skillbox/SearchEngine/cmake-build-debug/src/CMakeFiles/SearchEngine.dir/InvertedIndex.cpp.obj"
-  "C:/skillbox/SearchEngine/src/RelativeIndex.cpp" "C:/skillbox/SearchEngine/cmake-build-debug/src/CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.obj"
   "C:/skillbox/SearchEngine/src/SearchServer.cpp" "C:/skillbox/SearchEngine/cmake-build-debug/src/CMakeFiles/SearchEngine.dir/SearchServer.cpp.obj"
   "C:/skillbox/SearchEngine/src/main.cpp" "C:/skillbox/SearchEngine/cmake-build-debug/src/CMakeFiles/SearchEngine.dir/main.cpp.obj"
   )

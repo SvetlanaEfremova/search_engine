@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SearchEngine.dir/ConverterJSON.cpp.obj"
-  "CMakeFiles/SearchEngine.dir/Entry.cpp.obj"
   "CMakeFiles/SearchEngine.dir/InvertedIndex.cpp.obj"
-  "CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.obj"
   "CMakeFiles/SearchEngine.dir/SearchServer.cpp.obj"
   "CMakeFiles/SearchEngine.dir/main.cpp.obj"
   "SearchEngine.exe"

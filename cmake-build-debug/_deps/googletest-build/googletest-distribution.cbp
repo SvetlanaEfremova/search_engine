@@ -5,7 +5,7 @@
 		<Option title="googletest-distribution"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_deps\;CMake Files\cmake-build-debug\_deps\googletest-src\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\cmake\;CMake Files\nlohmann_json\;CMake Files\nlohmann_json\cmake\;CMake Files\src\;CMake Files\tests\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_deps\;CMake Files\cmake-build-debug\_deps\googletest-src\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\cmake\;CMake Files\nlohmann_json\;CMake Files\nlohmann_json\cmake\;CMake Files\src\;CMake Files\tests\;CMake Files\MakeConfigFiles\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-build"/>
@@ -269,6 +269,9 @@
 		</Unit>
 		<Unit filename="C:/skillbox/SearchEngine/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\"/>
+		</Unit>
+		<Unit filename="C:/skillbox/SearchEngine/MakeConfigFiles/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\MakeConfigFiles\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

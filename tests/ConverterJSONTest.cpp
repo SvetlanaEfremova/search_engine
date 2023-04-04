@@ -1,4 +1,4 @@
-#include "../include/ConverterJSON.h"
+#include "ConverterJSON.h"
 #include "gtest/gtest.h"
 
 TEST(sample_test_case, sample_test)

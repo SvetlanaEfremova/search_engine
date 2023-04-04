@@ -18,13 +18,31 @@ int GetTotalCountForWord(std::vector<Entry> entriesForWord);
  * @param wordList - список слов из запроса, _index - объект класса InvertedIndex, из которого
  * получаем данные о частоте встречаемости слов в базе данных
  */
-void ArrangeWordsFromRequest(std::vector<std::string> &wordList, InvertedIndex _index);
+void ArrangeWordsFromRequest(std::vector<std::string>& wordList, InvertedIndex _index);
+
+/**
+ * Метод добавляет ответ для отдельного слова в ответ для отдельного запроса
+ * @param answer - ответ на запрос
+ * @param entryForWord - данные из словаря для данного слова
+ * @param maxAbsRelevance - макс. абс. релевантность для всего поискового запроса
+ */
+void addAnswerForWord(std::vector<RelativeIndex>& answer, Entry entryForWord, float& maxAbsRelevance);
+
+/**
+ * Метод формирует ответ на поисковый запрос
+ * @param wordListFromRequest - список уникальных слов из запроса
+ * @param _index
+ * @param maxAbsRelevance - макс. абс. релевантность для всего поискового запроса
+ * @return answer - ответ на отдельный запрос
+ */
+std::vector<RelativeIndex> getAnswerForRequest(std::vector<std::string>wordListFromRequest, InvertedIndex _index,
+                                               float& maxAbsRelevance);
 
 /**
  * Метод сортирует данные в ответе для запроса по убыванию релевантности
  * @param answer - ответ на отдельный запрос
  */
-void ArrangeAnswerElements(std::vector<RelativeIndex> &answer);
+void ArrangeAnswerElements(std::vector<RelativeIndex>& answer);
 
 class SearchServer {
 public:

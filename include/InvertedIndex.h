@@ -17,6 +17,15 @@ std::vector<std::string> GetWordsFromString (std::string inString);
  */
 std::vector<std::string> GetUniqueWordsFromString (std::string inString);
 
+/**
+ * Метод добавляет слово в частотный словарь
+ * @param freq_dictionary - частотный словарь
+ * @param word - слово
+ * @param docIndex - номер документа, в котором встретилось это слово
+ */
+void addWordToDocumentBase(std::map<std::string, std::vector<Entry>>& freq_dictionary, std::string word,
+                           int docIndex);
+
 class InvertedIndex {
 public:
     InvertedIndex() = default;

@@ -9,39 +9,15 @@
 ../include/ConverterJSON.h
 RelativeIndex.h
 ../include/RelativeIndex.h
+nlohmann/json.hpp
+../include/nlohmann/json.hpp
 vector
 -
 string
--
-
-../include/Entry.h
-cstddef
--
-
-../include/InvertedIndex.h
-Entry.h
-../include/Entry.h
-vector
--
-string
--
-map
 -
 
 ../include/RelativeIndex.h
 cstddef
--
-
-../include/SearchServer.h
-Entry.h
-../include/Entry.h
-InvertedIndex.h
-../include/InvertedIndex.h
-RelativeIndex.h
-../include/RelativeIndex.h
-vector
--
-string
 -
 
 ../nlohmann_json/include/nlohmann/adl_serializer.hpp
@@ -818,17 +794,15 @@ stdint.h
 
 ../nlohmann_json/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
 
-C:/skillbox/SearchEngine/src/main.cpp
-iostream
--
-fstream
--
-nlohmann/json.hpp
-C:/skillbox/SearchEngine/src/nlohmann/json.hpp
+C:/skillbox/SearchEngine/src/ConverterJSON.cpp
+RelativeIndex.h
+C:/skillbox/SearchEngine/src/RelativeIndex.h
 ConverterJSON.h
 C:/skillbox/SearchEngine/src/ConverterJSON.h
-InvertedIndex.h
-C:/skillbox/SearchEngine/src/InvertedIndex.h
-SearchServer.h
-C:/skillbox/SearchEngine/src/SearchServer.h
+fstream
+-
+stdexcept
+-
+iostream
+-
 

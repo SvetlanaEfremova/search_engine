@@ -365,6 +365,12 @@ JSON_MultipleHeaders:BOOL=ON
 JSON_SystemInclude:BOOL=OFF
 
 //Value Computed by CMake
+MakeConfigFiles_BINARY_DIR:STATIC=C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles
+
+//Value Computed by CMake
+MakeConfigFiles_SOURCE_DIR:STATIC=C:/skillbox/SearchEngine/MakeConfigFiles
+
+//Value Computed by CMake
 SearchEngine_BINARY_DIR:STATIC=C:/skillbox/SearchEngine/cmake-build-debug/src
 
 //Value Computed by CMake
@@ -565,7 +571,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

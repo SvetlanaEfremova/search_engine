@@ -53,3 +53,11 @@ C:/skillbox/SearchEngine/cmake-build-debug/tests/CMakeFiles/install.dir
 C:/skillbox/SearchEngine/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
 C:/skillbox/SearchEngine/cmake-build-debug/tests/CMakeFiles/list_install_components.dir
 C:/skillbox/SearchEngine/cmake-build-debug/tests/CMakeFiles/install/strip.dir
+C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/CMakeFiles/install/local.dir
+C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/CMakeFiles/install.dir
+C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/CMakeFiles/edit_cache.dir
+C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/CMakeFiles/MakeConfigFiles.dir
+C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/CMakeFiles/rebuild_cache.dir
+C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/CMakeFiles/test.dir
+C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/CMakeFiles/list_install_components.dir
+C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/CMakeFiles/install/strip.dir

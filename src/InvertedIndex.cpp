@@ -1,5 +1,5 @@
-#include "../include/Entry.h"
-#include "../include/InvertedIndex.h"
+#include "Entry.h"
+#include "InvertedIndex.h"
 #include <thread>
 #include <vector>
 
@@ -46,51 +46,50 @@ std::vector<std::string> GetUniqueWordsFromString (std::string inString) {
     return words;
 }
 
-void InvertedIndex::UpdateDocumentBase(std::vector<std::string> input_docs) {
-    docs = input_docs;
-    auto threads = new std::thread *[docs.size()];   //потоки для работы с текстовыми файлами
-    for (int i = 0; i < docs.size(); i++) {
-        threads[i] = new std::thread([this, i]() {
-            std::vector<std::string> wordsFromDoc = GetWordsFromString(docs[i]);
-            for (auto word : wordsFromDoc) {
-                bool wordFoundInDictionary = false;
-                //проходим по словарю и проверяем, есть ли такое слово
-                for (auto it = freq_dictionary.begin(); it != freq_dictionary.end(); it++) {
-                    if (it->first == word) {
-                        wordFoundInDictionary = true;
-                        bool wordFoundInDocument = false; //встречалось ли уже вслово в этом документе
-                        for (auto &entry : it->second) {
-                            if (entry.doc_id == i) {
-                                entry.count++;
-                                wordFoundInDocument = true;
-                            }
-                        }
-                        /** если слово не встречалось в этом документе, добавляем документ в список
-                        для данного слова */
-                        if (!wordFoundInDocument) {
-                            Entry newEntry;
-                            newEntry.doc_id = i;
-                            newEntry.count = 1;
-                            it->second.push_back(newEntry);
-                        }
-                    }
-                }
-                //если слова нет в словаре, добавляем его в словарь
-                if (!wordFoundInDictionary) {
-                    Entry newEntry;
-                    newEntry.doc_id = i;
-                    newEntry.count = 1;
-                    std::vector<Entry> entries;
-                    entries.push_back(newEntry);
-                    freq_dictionary.insert(std::make_pair(word, entries));
+void addWordToDocumentBase(std::map<std::string, std::vector<Entry>>& freq_dictionary, std::string word,
+                           int docIndex) {
+    bool wordFoundInDictionary = false;
+    //проходим по словарю и проверяем, есть ли такое слово
+    for (auto it = freq_dictionary.begin(); it != freq_dictionary.end(); it++) {
+        if (it->first == word) {
+            wordFoundInDictionary = true;
+            bool wordFoundInDocument = false; //встречалось ли уже вслово в этом документе
+            for (auto &entry : it->second) {
+                if (entry.doc_id == docIndex) {
+                    entry.count++;
+                    wordFoundInDocument = true;
                 }
             }
-        });
+            // если слово не встречалось в этом документе, добавляем документ в список
+            if (!wordFoundInDocument) {
+                Entry newEntry = {(size_t)docIndex,1};
+                it->second.push_back(newEntry);
+            }
+        }
     }
+    //если слова нет в словаре, добавляем его в словарь
+    if (!wordFoundInDictionary) {
+        Entry newEntry = {(size_t)docIndex,1};
+        std::vector<Entry> entries;
+        entries.push_back(newEntry);
+        freq_dictionary.insert(std::make_pair(word, entries));
+    }
+}
+
+void InvertedIndex::UpdateDocumentBase(std::vector<std::string> input_docs) {
+    docs = input_docs;
+    std::vector<std::thread> threads;   //потоки для работы с текстовыми файлами
     for (int i = 0; i < docs.size(); i++) {
-        threads[i]->join();
+        threads.push_back(std::thread([this, i]() {
+            std::vector<std::string> wordsFromDoc = GetWordsFromString(docs[i]);
+            for (auto word : wordsFromDoc) {
+                addWordToDocumentBase(freq_dictionary,word,i);
+            }
+        }));
     }
-    delete[] threads;
+    for (auto& thread : threads) {
+        thread.join();
+    }
 };
 
 std::vector<Entry> InvertedIndex::GetWordCount(const std::string& word) {

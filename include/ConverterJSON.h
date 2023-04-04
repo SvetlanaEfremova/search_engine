@@ -1,7 +1,25 @@
 #pragma once
 #include "RelativeIndex.h"
+#include "nlohmann/json.hpp"
 #include <vector>
 #include <string>
+
+/**
+ * Метод записывает содержимое текстовых файлов в вектор со строками
+ * @param textsList - список текстовых файлов
+ * @param texts - вектор строк с содержимым текстовых файлов, который возвращает метод GetTextDocuments
+ * класса ConverterJSON
+ */
+void ReadTextFiles(std::vector<std::string> textsList, std::vector<std::string>& texts);
+
+/**
+    * Метод, который записывает ответ на запрос в формате json
+    * @param answer - ответ на отдельный запрос, элемент вектора, возвращаемого в результате
+    * работы метода search класса SearchServer
+    * @return - ответ в формате json
+    */
+nlohmann::json makeJSONAnswer(std::vector<RelativeIndex> answer);
+
 /**
 * Класс для работы с JSON-файлами
 */

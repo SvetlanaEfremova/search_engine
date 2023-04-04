@@ -5,7 +5,7 @@
 		<Option title="SearchEngine"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_deps\;CMake Files\cmake-build-debug\_deps\googletest-src\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\cmake\;CMake Files\nlohmann_json\;CMake Files\nlohmann_json\cmake\;CMake Files\src\;CMake Files\tests\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_deps\;CMake Files\cmake-build-debug\_deps\googletest-src\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\cmake\;CMake Files\nlohmann_json\;CMake Files\nlohmann_json\cmake\;CMake Files\src\;CMake Files\tests\;CMake Files\MakeConfigFiles\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/skillbox/SearchEngine/cmake-build-debug"/>
@@ -336,6 +336,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="C:/skillbox/SearchEngine/include"/>
 					<Add directory="C:/skillbox/SearchEngine/nlohmann_json/include"/>
 					<Add directory="C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/include"/>
 					<Add directory="C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest"/>
@@ -360,6 +361,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="C:/skillbox/SearchEngine/include"/>
 					<Add directory="C:/skillbox/SearchEngine/nlohmann_json/include"/>
 					<Add directory="C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/include"/>
 					<Add directory="C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest"/>
@@ -377,7 +379,66 @@
 					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/skillbox/SearchEngine/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="MakeConfigFiles">
+				<Option output="C:/skillbox/SearchEngine/MakeConfigFiles/MakeConfigFiles.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/skillbox/SearchEngine/MakeConfigFiles"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/include"/>
+					<Add directory="C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest"/>
+					<Add directory="C:/skillbox/SearchEngine/include"/>
+					<Add directory="C:/skillbox/SearchEngine/nlohmann_json/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/Makefile&quot;  VERBOSE=1 MakeConfigFiles"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MakeConfigFiles/fast">
+				<Option output="C:/skillbox/SearchEngine/MakeConfigFiles/MakeConfigFiles.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/skillbox/SearchEngine/MakeConfigFiles"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest/include"/>
+					<Add directory="C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googletest"/>
+					<Add directory="C:/skillbox/SearchEngine/include"/>
+					<Add directory="C:/skillbox/SearchEngine/nlohmann_json/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/Makefile&quot;  VERBOSE=1 MakeConfigFiles/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/skillbox/SearchEngine/cmake-build-debug/MakeConfigFiles/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="C:/skillbox/SearchEngine/MakeConfigFiles/MakeConfigFile.cpp">
+			<Option target="MakeConfigFiles"/>
+		</Unit>
+		<Unit filename="C:/skillbox/SearchEngine/MakeConfigFiles/MakeRequestsFile.cpp">
+			<Option target="MakeConfigFiles"/>
+		</Unit>
+		<Unit filename="C:/skillbox/SearchEngine/MakeConfigFiles/main_config.cpp">
+			<Option target="MakeConfigFiles"/>
+		</Unit>
 		<Unit filename="C:/skillbox/SearchEngine/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
@@ -399,6 +460,12 @@
 		<Unit filename="C:/skillbox/SearchEngine/include/InvertedIndex.h">
 			<Option target="SearchEngine"/>
 		</Unit>
+		<Unit filename="C:/skillbox/SearchEngine/include/MakeConfigFile.h">
+			<Option target="MakeConfigFiles"/>
+		</Unit>
+		<Unit filename="C:/skillbox/SearchEngine/include/MakeRequestsFile.h">
+			<Option target="MakeConfigFiles"/>
+		</Unit>
 		<Unit filename="C:/skillbox/SearchEngine/include/RelativeIndex.h">
 			<Option target="SearchEngine"/>
 		</Unit>
@@ -409,15 +476,9 @@
 			<Option target="SearchEngine"/>
 			<Option target="GtestTests"/>
 		</Unit>
-		<Unit filename="C:/skillbox/SearchEngine/src/Entry.cpp">
-			<Option target="SearchEngine"/>
-		</Unit>
 		<Unit filename="C:/skillbox/SearchEngine/src/InvertedIndex.cpp">
 			<Option target="SearchEngine"/>
 			<Option target="GtestTests"/>
-		</Unit>
-		<Unit filename="C:/skillbox/SearchEngine/src/RelativeIndex.cpp">
-			<Option target="SearchEngine"/>
 		</Unit>
 		<Unit filename="C:/skillbox/SearchEngine/src/SearchServer.cpp">
 			<Option target="SearchEngine"/>
@@ -482,6 +543,9 @@
 		</Unit>
 		<Unit filename="C:/skillbox/SearchEngine/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\"/>
+		</Unit>
+		<Unit filename="C:/skillbox/SearchEngine/MakeConfigFiles/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\MakeConfigFiles\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

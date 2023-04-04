@@ -103,38 +103,10 @@ src/CMakeFiles/SearchEngine.dir/ConverterJSON.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SearchEngine.dir/ConverterJSON.cpp.s"
 	cd /d C:\skillbox\SearchEngine\cmake-build-debug\src && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\skillbox\SearchEngine\src\ConverterJSON.cpp -o CMakeFiles\SearchEngine.dir\ConverterJSON.cpp.s
 
-src/CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.obj: src/CMakeFiles/SearchEngine.dir/flags.make
-src/CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.obj: src/CMakeFiles/SearchEngine.dir/includes_CXX.rsp
-src/CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.obj: ../src/RelativeIndex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\skillbox\SearchEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.obj"
-	cd /d C:\skillbox\SearchEngine\cmake-build-debug\src && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SearchEngine.dir\RelativeIndex.cpp.obj -c C:\skillbox\SearchEngine\src\RelativeIndex.cpp
-
-src/CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.i"
-	cd /d C:\skillbox\SearchEngine\cmake-build-debug\src && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\skillbox\SearchEngine\src\RelativeIndex.cpp > CMakeFiles\SearchEngine.dir\RelativeIndex.cpp.i
-
-src/CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.s"
-	cd /d C:\skillbox\SearchEngine\cmake-build-debug\src && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\skillbox\SearchEngine\src\RelativeIndex.cpp -o CMakeFiles\SearchEngine.dir\RelativeIndex.cpp.s
-
-src/CMakeFiles/SearchEngine.dir/Entry.cpp.obj: src/CMakeFiles/SearchEngine.dir/flags.make
-src/CMakeFiles/SearchEngine.dir/Entry.cpp.obj: src/CMakeFiles/SearchEngine.dir/includes_CXX.rsp
-src/CMakeFiles/SearchEngine.dir/Entry.cpp.obj: ../src/Entry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\skillbox\SearchEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/SearchEngine.dir/Entry.cpp.obj"
-	cd /d C:\skillbox\SearchEngine\cmake-build-debug\src && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SearchEngine.dir\Entry.cpp.obj -c C:\skillbox\SearchEngine\src\Entry.cpp
-
-src/CMakeFiles/SearchEngine.dir/Entry.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SearchEngine.dir/Entry.cpp.i"
-	cd /d C:\skillbox\SearchEngine\cmake-build-debug\src && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\skillbox\SearchEngine\src\Entry.cpp > CMakeFiles\SearchEngine.dir\Entry.cpp.i
-
-src/CMakeFiles/SearchEngine.dir/Entry.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SearchEngine.dir/Entry.cpp.s"
-	cd /d C:\skillbox\SearchEngine\cmake-build-debug\src && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\skillbox\SearchEngine\src\Entry.cpp -o CMakeFiles\SearchEngine.dir\Entry.cpp.s
-
 src/CMakeFiles/SearchEngine.dir/InvertedIndex.cpp.obj: src/CMakeFiles/SearchEngine.dir/flags.make
 src/CMakeFiles/SearchEngine.dir/InvertedIndex.cpp.obj: src/CMakeFiles/SearchEngine.dir/includes_CXX.rsp
 src/CMakeFiles/SearchEngine.dir/InvertedIndex.cpp.obj: ../src/InvertedIndex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\skillbox\SearchEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/SearchEngine.dir/InvertedIndex.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\skillbox\SearchEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/SearchEngine.dir/InvertedIndex.cpp.obj"
 	cd /d C:\skillbox\SearchEngine\cmake-build-debug\src && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SearchEngine.dir\InvertedIndex.cpp.obj -c C:\skillbox\SearchEngine\src\InvertedIndex.cpp
 
 src/CMakeFiles/SearchEngine.dir/InvertedIndex.cpp.i: cmake_force
@@ -148,7 +120,7 @@ src/CMakeFiles/SearchEngine.dir/InvertedIndex.cpp.s: cmake_force
 src/CMakeFiles/SearchEngine.dir/SearchServer.cpp.obj: src/CMakeFiles/SearchEngine.dir/flags.make
 src/CMakeFiles/SearchEngine.dir/SearchServer.cpp.obj: src/CMakeFiles/SearchEngine.dir/includes_CXX.rsp
 src/CMakeFiles/SearchEngine.dir/SearchServer.cpp.obj: ../src/SearchServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\skillbox\SearchEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/SearchEngine.dir/SearchServer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\skillbox\SearchEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/SearchEngine.dir/SearchServer.cpp.obj"
 	cd /d C:\skillbox\SearchEngine\cmake-build-debug\src && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SearchEngine.dir\SearchServer.cpp.obj -c C:\skillbox\SearchEngine\src\SearchServer.cpp
 
 src/CMakeFiles/SearchEngine.dir/SearchServer.cpp.i: cmake_force
@@ -163,8 +135,6 @@ src/CMakeFiles/SearchEngine.dir/SearchServer.cpp.s: cmake_force
 SearchEngine_OBJECTS = \
 "CMakeFiles/SearchEngine.dir/main.cpp.obj" \
 "CMakeFiles/SearchEngine.dir/ConverterJSON.cpp.obj" \
-"CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.obj" \
-"CMakeFiles/SearchEngine.dir/Entry.cpp.obj" \
 "CMakeFiles/SearchEngine.dir/InvertedIndex.cpp.obj" \
 "CMakeFiles/SearchEngine.dir/SearchServer.cpp.obj"
 
@@ -173,15 +143,13 @@ SearchEngine_EXTERNAL_OBJECTS =
 
 src/SearchEngine.exe: src/CMakeFiles/SearchEngine.dir/main.cpp.obj
 src/SearchEngine.exe: src/CMakeFiles/SearchEngine.dir/ConverterJSON.cpp.obj
-src/SearchEngine.exe: src/CMakeFiles/SearchEngine.dir/RelativeIndex.cpp.obj
-src/SearchEngine.exe: src/CMakeFiles/SearchEngine.dir/Entry.cpp.obj
 src/SearchEngine.exe: src/CMakeFiles/SearchEngine.dir/InvertedIndex.cpp.obj
 src/SearchEngine.exe: src/CMakeFiles/SearchEngine.dir/SearchServer.cpp.obj
 src/SearchEngine.exe: src/CMakeFiles/SearchEngine.dir/build.make
 src/SearchEngine.exe: src/CMakeFiles/SearchEngine.dir/linklibs.rsp
 src/SearchEngine.exe: src/CMakeFiles/SearchEngine.dir/objects1.rsp
 src/SearchEngine.exe: src/CMakeFiles/SearchEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\skillbox\SearchEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable SearchEngine.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\skillbox\SearchEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable SearchEngine.exe"
 	cd /d C:\skillbox\SearchEngine\cmake-build-debug\src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SearchEngine.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

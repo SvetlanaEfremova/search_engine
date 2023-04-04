@@ -45,6 +45,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/JetBrains/CLion 2021.1.2/bin/cmake/win/share/cmake-3.19/Modules/ProcessorCount.cmake"
   "C:/Program Files/JetBrains/CLion 2021.1.2/bin/cmake/win/share/cmake-3.19/Modules/WriteBasicConfigVersionFile.cmake"
   "../CMakeLists.txt"
+  "../MakeConfigFiles/CMakeLists.txt"
   "CMakeFiles/3.19.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.19.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.19.2/CMakeRCCompiler.cmake"
@@ -91,6 +92,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "nlohmann_json/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "MakeConfigFiles/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -101,4 +103,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "src/CMakeFiles/SearchEngine.dir/DependInfo.cmake"
   "tests/CMakeFiles/GtestTests.dir/DependInfo.cmake"
+  "MakeConfigFiles/CMakeFiles/MakeConfigFiles.dir/DependInfo.cmake"
   )
