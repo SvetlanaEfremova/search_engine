@@ -1,5 +1,0 @@
-if(EXISTS "C:/skillbox/SearchEngine/cmake-build-debug/tests/SearchEngine[1]_tests.cmake")
-  include("C:/skillbox/SearchEngine/cmake-build-debug/tests/SearchEngine[1]_tests.cmake")
-else()
-  add_test(SearchEngine_NOT_BUILT SearchEngine_NOT_BUILT)
-endif()
