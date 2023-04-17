@@ -26,6 +26,12 @@ std::vector<std::string> GetUniqueWordsFromString (std::string inString);
 void addWordToDocumentBase(std::map<std::string, std::vector<Entry>>& freq_dictionary, std::string word,
                            int docIndex);
 
+/**
+ * Метод для сортировки записей в словаре по возрастанию значения docid
+ * @param entries - список документов для отдельного слова
+ */
+void sortEntriesForWord (std::vector<Entry>& entries);
+
 class InvertedIndex {
 public:
     InvertedIndex() = default;

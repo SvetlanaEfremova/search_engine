@@ -5,6 +5,16 @@
 #include <string>
 
 /**
+ * Функция для создания файла "config.json"
+ */
+void MakeConfigFile();
+
+/**
+ * Функция для создания файла "requests.json"
+ */
+void MakeRequestsFile();
+
+/**
  * Метод записывает содержимое текстовых файлов в вектор со строками
  * @param textsList - список текстовых файлов
  * @param texts - вектор строк с содержимым текстовых файлов, который возвращает метод GetTextDocuments

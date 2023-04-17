@@ -2,6 +2,7 @@
 #include "InvertedIndex.h"
 #include <thread>
 #include <vector>
+#include <mutex>
 
 std::vector<std::string> GetWordsFromString (std::string inString) {
     std::vector<std::string> words = {};    //возвращаемый список слов
@@ -63,7 +64,7 @@ void addWordToDocumentBase(std::map<std::string, std::vector<Entry>>& freq_dicti
             // если слово не встречалось в этом документе, добавляем документ в список
             if (!wordFoundInDocument) {
                 Entry newEntry = {(size_t)docIndex,1};
-                it->second.push_back(newEntry);
+                it->second.emplace_back(newEntry);
             }
         }
     }
@@ -76,21 +77,37 @@ void addWordToDocumentBase(std::map<std::string, std::vector<Entry>>& freq_dicti
     }
 }
 
+void sortEntriesForWord (std::vector<Entry>& entries) {
+    for (int i = 0; i < entries.size() - 1; i++) {
+        size_t min = entries[i].doc_id;
+        for (int j = i+1; j < entries.size(); j++)
+            if (entries[j].doc_id < min) {
+                Entry temp = entries[i];
+                entries[i] = entries[j];
+                entries[j] = temp;
+            }
+    }
+}
+
+std::mutex freq_dictionary_access;
 void InvertedIndex::UpdateDocumentBase(std::vector<std::string> input_docs) {
     docs = input_docs;
     std::vector<std::thread> threads;   //потоки для работы с текстовыми файлами
     for (int i = 0; i < docs.size(); i++) {
-        threads.push_back(std::thread([this, i]() {
+        threads.emplace_back([this, i]() {
             std::vector<std::string> wordsFromDoc = GetWordsFromString(docs[i]);
-            for (auto word : wordsFromDoc) {
+            for (const auto& word : wordsFromDoc) {
+                freq_dictionary_access.lock();
                 addWordToDocumentBase(freq_dictionary,word,i);
+                sortEntriesForWord(freq_dictionary[word]);  //сортировка записей по возр-ю docid
+                freq_dictionary_access.unlock();
             }
-        }));
+        });
     }
     for (auto& thread : threads) {
         thread.join();
     }
-};
+}
 
 std::vector<Entry> InvertedIndex::GetWordCount(const std::string& word) {
     return freq_dictionary[word];

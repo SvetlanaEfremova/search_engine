@@ -4,6 +4,36 @@
 #include <stdexcept>
 #include <iostream>
 
+void MakeConfigFile () {
+    nlohmann::json configJSON;
+    nlohmann::json config;
+    config["name"] = "SkillboxSearchEngine";
+    config["version"] = "1.0";
+    config["max_responses"] = 5;
+    nlohmann::json files;
+    files = {"resources/file001.txt",
+             "resources/file002.txt",
+             "resources/file003.txt",
+             "resources/file004.txt",
+             "resources/file005.txt",
+             "resources/file006.txt",
+             "resources/file007.txt"};
+    configJSON["config"] = config;
+    configJSON["files"] = files;
+    std::ofstream configFile("config.json");    //открываем файл config.json для записи
+    configFile << std::setw(2) << configJSON << std::endl;  //записываем данные в файл
+    std::cout << "The new \"config.json\" file was created" << std::endl;
+
+}
+
+void MakeRequestsFile() {
+    nlohmann::json requestsJSON;
+    requestsJSON["requests"] = {"the","it was going to rain","sometimes","had","at that moment"};
+    std::ofstream requestsFile("requests.json");    //открываем файл для записи
+    requestsFile << std::setw(2) << requestsJSON;   //записываем запросы в файл
+    std::cout << "The new \"requests.json\" file was created" << std::endl;
+}
+
 void ReadTextFiles(std::vector<std::string> textsList, std::vector<std::string>& texts) {
     for (int i = 0; i < textsList.size(); i++) {
         std::ifstream textFile(textsList[i]);
@@ -24,21 +54,28 @@ std::vector<std::string> ConverterJSON::GetTextDocuments() {
     std::vector<std::string> textsList; //список названий текстовых файлов в файле config
     std::vector<std::string> texts = {}; //возвращаемое содержимое текстовых файлов
     nlohmann::json configJSON;  //переменная, в которую запишем содержимое файла config.json
-    std::ifstream configFile("../../config.json");    //открываем файл config.json для чтения
-    if (!configFile.is_open())
-        throw std::runtime_error("Error: \"config.json\" file is missing");
-    configFile >> configJSON;
-    if (configJSON["config"] == nullptr || configJSON["files"] == nullptr)
-        throw std::runtime_error("Error: \"config.json\" file is invalid");
-    textsList = configJSON["files"];
-    ReadTextFiles(textsList,texts);    //записываем содержимое текстовых файлов в texts
-    return texts;
+    std::ifstream configFile("config.json");    //открываем файл config.json для чтения
+    if (!configFile.is_open()) {
+        std::cout << "Error: \"config.json\" file is missing" << std::endl;
+        MakeConfigFile();   //если файла config.json нет, создаём его
+        configFile.open("config.json");
+    }
+    if (configFile.is_open()) {
+        configFile >> configJSON;
+        if (configJSON["config"] == nullptr || configJSON["files"] == nullptr)
+            throw std::runtime_error("Error: \"config.json\" file is invalid");
+        textsList = configJSON["files"];
+        ReadTextFiles(textsList, texts);    //записываем содержимое текстовых файлов в texts
+        return texts;
+    }
+    else
+        throw std::runtime_error("Error: cannot open \"config.json\" file");
 }
 
 int ConverterJSON::GetResponsesLimit() {
     int responsesLimit = 5;
     nlohmann::json configJSON;
-    std::ifstream configFile("../../config.json");
+    std::ifstream configFile("config.json");
     if (configFile.is_open()) {
         configFile >> configJSON;
         if (configJSON["config"]["max_responses"] != nullptr)
@@ -50,14 +87,19 @@ int ConverterJSON::GetResponsesLimit() {
 std::vector<std::string> ConverterJSON::GetRequests() {
     std::vector<std::string> requests = {}; //возвращаемый список запросов
     nlohmann::json requestsJSON;    //переменная, в которую запишем содержимое файла config.json
-    std::ifstream requestsFile("../../requests.json");
+    std::ifstream requestsFile("requests.json");
+    if (!requestsFile.is_open()) {
+        std::cout << "Error: \"requests.json\" file is missing" << std::endl;
+        MakeRequestsFile();   //если файла requests.json нет, создаём его
+        requestsFile.open("requests.json");
+    }
     if (requestsFile.is_open()) {
         requestsFile >> requestsJSON;
         if (requestsJSON["requests"] != nullptr)
             requests = requestsJSON["requests"];
     }
     else {
-        throw std::runtime_error("Error: \"requests.json\" file is missing");
+        throw std::runtime_error("Error: cannot open \"requests.json\" file");
     }
     return requests;
 }
@@ -86,7 +128,7 @@ nlohmann::json makeJSONAnswer(std::vector<RelativeIndex> answer) {
 }
 
 void ConverterJSON::putAnswers(std::vector<std::vector<RelativeIndex>> answers) {
-    std::ofstream answersFile("../../answers.json");  //открываем (или создаём) файл answers.json для записи
+    std::ofstream answersFile("answers.json");  //открываем (или создаём) файл answers.json для записи
     if (answersFile.is_open()) {
         nlohmann::json answersJSON; //переменная, в которую запишем содержимое answers
         for (int i = 0; i < answers.size(); i++) {
@@ -102,9 +144,9 @@ void ConverterJSON::putAnswers(std::vector<std::vector<RelativeIndex>> answers) 
                 answerId = "request" + std::to_string(i + 1);
             answersJSON["answers"][answerId] = answerJSON;
         }
-        answersFile << answersJSON;
+        answersFile  << std::setw(2) << answersJSON;
     }
     else {
-        throw std::runtime_error("Error: cannot write in \"answers.json\" file");
+        throw std::runtime_error("Error: cannot open \"answers.json\" file");
     }
 }
